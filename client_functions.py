@@ -34,14 +34,18 @@ def watch_region(name, agent):
     r = requests.get(f"https://nationstates.net/cgi-bin/api.cgi?region={name}&q=lastupdate", headers=headers)
     r_parse = BeautifulSoup(r.text, "lxml")
     lastup = int(r_parse.LASTUPDATE.string)
+    time.sleep(0.6)
     return lastup
 
 def watch_nation(name, agent):
     headers = {
         "User-Agent" : agent
     }
-    r = requests.get
-
+    r = requests.get(f"https://nationstates.net/cgi-bin/api.cgi?nation={name}&q=census;mode=score;scale=65")
+    r_parse = BeautifulSoup(r.text, "lxml")
+    inf = int(r_parse.SCORE.string)
+    time.sleep(0.6)
+    return inf
 
 def create_trigger_list(file):
     with open(f"{file}", "r") as li:
