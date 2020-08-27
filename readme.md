@@ -6,7 +6,7 @@ Mono_Trigger uses a GUI to assist in triggering. You supply a list of trigger re
 
 ***
 ## How To Install
-Download and unzip the source file from the [latest release.](https://github.com/AavHRF/mono_trigger/releases/tag/v1.0.0a)
+Download and unzip the source file from the [latest release.](https://github.com/AavHRF/mono_trigger/releases/tag/v1.0.1a)
 
 Using Python3, you need to install the following packages
 * BeautifulSoup (bs4)
