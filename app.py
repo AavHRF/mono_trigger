@@ -8,7 +8,7 @@ version = "0.1.0a"
 # Variable assignment for later
 verification_status = False
 watch_list = ""
-trig_list = dict()
+trig_list = list()
 useragent = ""
 user_agent = ""
 
@@ -32,7 +32,7 @@ while True:
     if event == "Verify Nation":
         useragent = values['UAGENT']
         user_agent = cf.sanitize(useragent)
-        verify_response = cf.verify_nation(useragent)
+        verify_response = cf.verify_nation(user_agent)
         if verify_response == True:
             print("Nation verified successfully!")
             verification_status = True
@@ -43,5 +43,11 @@ while True:
     if event == "Load List":
         try:
             watch_list = sg.popup_get_file("Trigger List")
+            trig_list = cf.create_trigger_list(watch_list)
         except Exception as e:
             print(e)
+
+    if event == "Start Triggering":
+        if verification_status == False:
+            print("You either have not verified your useragent, or you have supplied one that does not work!")
+            cf.debug_log("Verification catch (trigger start function)")
