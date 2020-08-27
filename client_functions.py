@@ -36,9 +36,19 @@ def watch_region(name, agent):
     lastup = int(r_parse.LASTUPDATE.string)
     return lastup
 
+def watch_nation(name, agent):
+    headers = {
+        "User-Agent" : agent
+    }
+    r = requests.get
+
 
 def create_trigger_list(file):
     with open(f"{file}", "r") as li:
         region_list = li.read().split(",")
         time.sleep(0.6)
         return region_list
+
+def get_version():
+    version = "1.0.0a"
+    return version
