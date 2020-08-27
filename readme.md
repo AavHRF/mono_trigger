@@ -8,8 +8,10 @@ Package requirements:
 * PySimpleGUI
 * Requests
 * BeautifulSoup 4
+* lxml
 
-Run `python3 -m pip install PySimpleGUI requests bs4` to install these packages.
+
+Run `python3 -m pip install PySimpleGUI requests bs4 lxml` to install these packages.
 
 ## How To Use
-You must supply a file with your trigger nations, separated by commas. The trigger nations must be in the order that you want the triggers to be watched.
+You must supply a file with your trigger regions, separated by commas. The trigger regions must be in the order that you want the triggers to be watched.

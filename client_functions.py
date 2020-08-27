@@ -1,6 +1,8 @@
 # Header file to have functions in to keep app clean
 import requests
 from bs4 import BeautifulSoup
+import ntplib
+import time
 
 def debug_log(text):
     with open("debug.log", "a") as fstream:
@@ -31,9 +33,13 @@ def watch_region(name, agent):
         "User-Agent" : agent
     }
     r = requests.get(f"https://nationstates.net/cgi-bin/api.cgi?region={name}&q=lastupdate", headers=headers)
+    r_parse = BeautifulSoup(r.text, "lxml")
+    lastup = int(r_parse.LASTUPDATE.string)
+    return lastup
+
 
 def create_trigger_list(file):
-    region_list = list()
     with open(f"{file}", "r") as li:
         region_list = li.read().split(",")
+        time.sleep(0.6)
         return region_list
