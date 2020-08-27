@@ -1,5 +1,5 @@
 # Mono_Trigger
-######Easy triggering for gameplayers all around.
+###### Easy triggering for gameplayers all around.
 
 ## How To Install
 You must have **Python3** installed in order to use this tool.
