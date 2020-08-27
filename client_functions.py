@@ -1,7 +1,6 @@
 # Header file to have functions in to keep app clean
 import requests
 from bs4 import BeautifulSoup
-import ntplib
 import time
 
 def debug_log(text):
