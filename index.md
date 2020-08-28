@@ -32,3 +32,8 @@ You need to supply a list of trigger regions, click the "Load List" button to ge
 ## Safety Features
 * Useragent verification
 * Automatic ratelimiting
+
+## Beta Information
+The beta version of the app is available from [here](https://github.com/AavHRF/mono_trigger/tree/v2.1.1-beta). When run, please understand that this software may not function at all in the way you expect, and quite possibly may not work at all. You have been warned.
+***
+With that said, the rewrite version is much more powerful, and has additional options. You may wish to consult the [readme](https://github.com/AavHRF/mono_trigger/blob/v2.1.1-beta/readme.md) for the beta version prior to using it, as it contains further instructions for how best to utilize the beta rewrite.
