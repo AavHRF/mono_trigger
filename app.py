@@ -71,5 +71,6 @@ while True:
                     if watch != upd_time:
                         print('UPDATE EVENT DETECTED!')
                         break
+                i += 1
 
 
